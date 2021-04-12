@@ -1,8 +1,11 @@
 # Requirements
 ## Introduction
- --- TBD 
+ * As secondary school students several people have struggled with understanding geometry based problems since it concerns the usage of spatial and logical skills unlike algebra that requires analytical thinking. Improper visualization and interpretation of measurement parameters have also contributed to several errors while solving these problems manually.
+ * This geometric shape parameter calculator is developed using multiple programming concepts of C to aid these students in cross-referring their manually calculated answers.
+
 
 ## Research
+   Geometry is an essential section in Mathematics and is the fundamental way of perceiving the world around us. It plays a significant role in engineering and architecture. Basics of geometry begin with the visualization and measurement of 2-dimensional and 3-dimensional shapes.
 ![Description](Link to Pic)
 -- Content 
 ## Cost and Features
