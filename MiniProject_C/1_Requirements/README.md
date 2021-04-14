@@ -14,7 +14,7 @@
 ## Defining Our System
     -- TBD
 ## SWOT ANALYSIS
-![SWOT Analysis of GeometriCalc]()
+![SWOT Analysis of GeometriCalc](MiniProject_C/1_Requirements/SWOT.png)
 
 # 4W&#39;s and 1&#39;H
 
