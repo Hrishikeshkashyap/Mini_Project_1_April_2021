@@ -34,7 +34,7 @@ The various features of this calculator include:
    9. N-sided Regular Pyramid
 
 ## Defining Our System
-    -- TBD
+![System definition diagram](https://github.com/256152/Mini_Project_1_April_2021/blob/be2cadb06fc5d21a6febb137602d4a5a247d18a7/MiniProject_C/1_Requirements/Define_sys.png)
 ## SWOT ANALYSIS
 ![SWOT Analysis of GeometriCalc](https://github.com/256152/Mini_Project_1_April_2021/blob/3aca8e1cdca1395ec9b16f4929e6b76877844578/MiniProject_C/1_Requirements/SWOT.png)
 
