@@ -1,5 +1,7 @@
 # SDLC Activity Based Learning
 ![Calculator image](https://github.com/256152/Mini_Project_1_April_2021/blob/0d245bf65675ee89cd9cffbd19e9f424d65b4f0b/MiniProject_C/6_ImagesAndVideos/title.jpg)
+# GeometriCalc M.0
+  This calculator will compute the various visualizing measurements such as perimeter, areas, volume etc., of 2D and 3D geometric shapes. This utility is convenient and helpful for the target audience especially for cross-checking their manually devised answers.
 
 Visit [Pages for Report -optional](using github.io option)
 
