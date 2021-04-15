@@ -3,8 +3,7 @@ TEST_PROJ_NAME = Test_$(PROJ_NAME)
 
 BUILD_DIR = Build
 
-SRC = Main_prog_geocalc.c\
-src\2d_functions.c\
+SRC = src\2d_functions.c\
 src\3d_functions.c
 
 #TEST_SRC = test/test_crypto.c\
@@ -28,7 +27,7 @@ endif
  .PHONY: all test coverage clean
 
 all: $(BUILD_DIR)
-	gcc main.c $(SRC) $(INC) -o $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
+	gcc Main_prog_geocalc.c $(SRC) $(INC) -o $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
 
 run: all
 	$(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))

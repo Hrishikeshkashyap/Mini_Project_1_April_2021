@@ -52,7 +52,7 @@ void sphere_func(sphere* sph, output_3d* op){
  */
 void hemisphere_func(hemisphere* hsph, output_3d* op){
     op->tsa = 3 * PI * hsph->radius * hsph->radius;
-    op->volume = 2/3 * PI * hsph->radius * hsph->radius * hsph->radius;
+    op->volume = 0.666666 * PI * hsph->radius * hsph->radius * hsph->radius;
 }
 /**
  * @brief function definition for torus
@@ -74,3 +74,63 @@ void cylinder_func(cylinder* cyl, output_3d* op){
     op->tsa = 2 * PI * cyl->radius * (cyl->radius + cyl->height);
     op->volume =  PI * cyl->radius * cyl->radius * cyl->height;
 }
+
+void three_dimension(int shape_3D){
+    output_3d* op_3d = ((output_3d *) malloc(sizeof(output_3d)));
+    cube cb1 = {0};
+    cuboid cd1 = {0,0,0};
+    sphere s1 = {0};
+    hemisphere h1 = {0};
+    torus t1 = {0,0};
+    cylinder cy1 = {0,0};
+    switch(shape_3D){
+        case 0:
+            printf("\nQuitting GeometriCalc M.0.\n");
+            exit(0);
+            break;
+        case 1:
+            printf("\nPlease type the length of the cube:\n");
+            scanf("%lf",&cb1.length_of_side);
+            cube_func(&cb1, op_3d);
+            printf("Total Surface Area: %lf \nVolume: %lf",op_3d->tsa,op_3d->volume);
+            break;
+        case 2:
+            printf("\nPlease type the length, breadth and height of the cuboid:\n");
+            scanf("%lf %lf %lf",&cd1.length,&cd1.breadth,&cd1.height);
+            cuboid_func(&cd1, op_3d);
+            printf("Total Surface Area: %lf \nVolume: %lf",op_3d->tsa,op_3d->volume);
+            break;
+        case 3:
+            printf("\nPlease type the radius of the sphere:\n");
+            scanf("%lf",&s1.radius);
+            sphere_func(&s1, op_3d); 
+            printf("Total Surface Area: %lf \nVolume: %lf",op_3d->tsa,op_3d->volume);
+            break;
+        case 4:
+            printf("\nPlease type the radius of the hemisphere:\n");
+            scanf("%lf",&h1.radius);
+            hemisphere_func(&h1, op_3d);  
+            printf("Total Surface Area: %lf \nVolume: %lf",op_3d->tsa,op_3d->volume);
+            break; 
+        case 5:
+            printf("\nPlease type the large radius and small radius of the torus:\n");
+            scanf("%lf %lf",&t1.large_radius,&t1.small_radius);
+            if(t1.large_radius >= t1.small_radius){
+            torus_func(&t1, op_3d); 
+            printf("Total Surface Area: %lf \nVolume: %lf",op_3d->tsa,op_3d->volume);
+            break;
+            }
+            else{
+                printf("\nLarge radius less than small radius. Please provide proper input \n");
+                break;
+            }
+        case 6:
+            printf("\nPlease type the radius and height of the cylinder:\n");
+            scanf("%lf %lf",&cy1.radius,&cy1.height);
+            cylinder_func(&cy1, op_3d);  
+            printf("Total Surface Area: %lf \nVolume: %lf",op_3d->tsa,op_3d->volume);
+            break;    
+        default:
+            printf("\nInvalid choice, choose a valid 2D shape option\n");
+    }
+};

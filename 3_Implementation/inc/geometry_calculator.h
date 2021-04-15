@@ -225,4 +225,7 @@ void torus_func(torus* tor, output_3d* op);
  */
 void cylinder_func(cylinder* cyl, output_3d* op);
 
+void two_dimension(int shape_2D);
+
+void three_dimension(int shape_3D);
 #endif  /* #define __GEOMETRY_CALCULATOR_H__ */
