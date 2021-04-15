@@ -1,29 +1,51 @@
-# Name of the project
-PROJECT_NAME = geometry_calc
+PROJ_NAME = Geometricalc_M0
+TEST_PROJ_NAME = Test_$(PROJ_NAME)
 
-# Output directory
-BUILD = build
+BUILD_DIR = Build
 
-# All source code files
 SRC = Main_prog_geocalc.c\
 src\2d_functions.c\
 src\3d_functions.c
 
-# All include folders with header files
-INC	= -Iinc
+#TEST_SRC = test/test_crypto.c\
+#unity/unity.c
 
-# Project Output name
-PROJECT_OUTPUT = $(BUILD)\$(PROJECT_NAME).exe
+INC = -Iinc\
+ -Iunity
 
-# Default target built
-$(PROJECT_NAME):all
+ifdef OS
+   RM = del /q
+   FixPath = $(subst /,\,$1)
+   EXEC = exe
+else
+   ifeq ($(shell uname), Linux)
+      RM = rm -rf
+      FixPath = $1
+	  EXEC = out
+   endif
+endif
 
-# Run the target even if the matching name exists
-.PHONY: run clean test doc all
+ .PHONY: all test coverage clean
 
-all: $(SRC) $(BUILD)
-	gcc $(SRC) $(INC) -o $(PROJECT_OUTPUT)
+all: $(BUILD_DIR)
+	gcc main.c $(SRC) $(INC) -o $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
 
-# Call `make run` to run the application
-run:$(PROJECT_NAME)
-	.\$(PROJECT_OUTPUT)
+run: all
+	$(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
+
+test: $(SRC) $(TEST_SRC) $(BUILD_DIR)
+	gcc $(SRC) $(TEST_SRC) $(INC) -o $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
+	$(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
+
+coverage:${PROJECT_NAME}
+	gcc -fprofile-arcs -ftest-coverage $(SRC) $(TEST_SRC) $(INC) -o $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
+	$(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
+	gcov -a $(SRC)
+
+$(BUILD_DIR):
+	mkdir $(BUILD_DIR)
+
+
+clean:
+	$(RM) $(call FixPath,$(BUILD_DIR)/*)
+	rmdir $(BUILD_DIR)
