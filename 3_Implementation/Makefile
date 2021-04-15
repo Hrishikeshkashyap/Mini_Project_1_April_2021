@@ -10,7 +10,7 @@ src\3d_functions.c
 #unity/unity.c
 
 INC = -Iinc\
- -Iunity
+ #-Iunity
 
 ifdef OS
    RM = del /q
