@@ -1,7 +1,7 @@
 /**
  * @file geometry_calculator.h
  * @author Manjari.A.P
- * @brief 
+ * @brief header file for geometric calculator
  * @version 0.1
  * @date 2021-04-14
  * 
@@ -17,39 +17,12 @@
 #include <math.h>
 
 /**
- * @brief structure for N-sided regular polygon
- * 
- */
-typedef struct n_sided_reg_polygon{
-    double number_of_sides;
-    double length_of_side;
-}n_poly;
-/**
- * @brief structure for isosceles triangle
- * 
- */
-typedef struct isosceles_triangle{
-    double length_of_common_side;
-    double length_of_base;
-}isos_tri;
-
-/**
- * @brief structure for scalene triangle
- * 
- */
-typedef struct scalene_triangle{
-    double length_of_side1;
-    double length_of_side2;
-    double length_of_side3;
-}scal_tri;
-
-/**
  * @brief structure for circle
  * 
  */
 typedef struct circle{
     double radius;
-}circ;
+}circle;
 
 /**
  * @brief structure for ellipse
@@ -58,7 +31,7 @@ typedef struct circle{
 typedef struct ellipse{
     double semi_major_axis;
     double semi_minor_axis;
-}ellis;
+}ellipse;
 
 /**
  * @brief structure for ring
@@ -67,7 +40,7 @@ typedef struct ellipse{
 typedef struct ring{
     double outer_radius;
     double inner_radius;
-}rin;
+}ring;
 
 /**
  * @brief structure for rectangle
@@ -76,7 +49,7 @@ typedef struct ring{
 typedef struct rectangle{
     double length;
     double breadth;
-}rect;
+}rectangle;
 
 /**
  * @brief structure for parallelogram
@@ -86,7 +59,7 @@ typedef struct parallelogram{
     double length;
     double breadth;
     double height;
-}paral;
+}parallelogram;
 
 /**
  * @brief structure for rhombus
@@ -96,7 +69,7 @@ typedef struct rhombus{
     double length_of_side;
     double length_of_diagonal1;
     double length_of_diagonal2;
-}rhom;
+}rhombus;
 
 /**
  * @brief structure for cube
@@ -104,7 +77,7 @@ typedef struct rhombus{
  */
 typedef struct cube{
     double length_of_side;
-}cub;
+}cube;
 
 /**
  * @brief structure for cuboid
@@ -114,7 +87,7 @@ typedef struct cuboid{
     double length;
     double breadth;
     double height;
-}cubd;
+}cuboid;
 
 /**
  * @brief structure for sphere
@@ -122,7 +95,7 @@ typedef struct cuboid{
  */
 typedef struct sphere{
     double radius;
-}sphr;
+}sphere;
 
 /**
  * @brief structure for hemisphere
@@ -130,7 +103,7 @@ typedef struct sphere{
  */
 typedef struct hemisphere{
     double radius;
-}hmsph;
+}hemisphere;
 
 /**
  * @brief structure for torus
@@ -139,16 +112,8 @@ typedef struct hemisphere{
 typedef struct torus{
     double large_radius;
     double small_radius;
-}tor;
+}torus;
 
-/**
- * @brief structure for right circular cone
- * 
- */
-typedef struct cone{
-    double radius;
-    double height;
-}con;
 /**
  * @brief structure for right circular cylinder
  * 
@@ -156,26 +121,108 @@ typedef struct cone{
 typedef struct cylinder{
     double radius;
     double height;
-}cyl;
+}cylinder;
 
 /**
- * @brief structure for N-sided regular prism
+ * @brief structure for output of 2d shapes- perimeter and area
  * 
  */
-typedef struct n_sided_reg_prism{
-    double number_of_sides;
-    double length_of_side;
-    double height;
-}n_prism;
+typedef struct output_2d{
+    double perimeter;
+    double area;
+}output_2d;
+/**
+ * @brief structure for output of 3d shapes- tsa and volume
+ * 
+ */
+typedef struct output_3d{
+    double tsa;
+    double volume;
+}output_3d;
+/**
+ * @brief function that computes and stores the area and perimeter of circle from the given input
+ * 
+ * @param circ 
+ * @param op 
+ */
+void circle_func(circle* circ, output_2d* op);
+/**
+ * @brief function that computes and stores the area and perimeter of ellipse from the given input
+ * 
+ * @param ellp 
+ * @param op 
+ */
+void ellipse_func(ellipse* ellp, output_2d* op);
+/**
+ * @brief function that computes and stores the area and perimeter of ring from the given input
+ * 
+ * @param rin 
+ * @param op 
+ */
+void ring_func(ring* rin, output_2d* op);
+/**
+ * @brief function that computes and stores the area and perimeter of rectangle from the given input
+ * 
+ * @param rect 
+ * @param op 
+ */
+void rectangle_func(rectangle* rect, output_2d* op);
+/**
+ * @brief function that computes and stores the area and perimeter of parallelogram from the given input
+ * 
+ * @param para 
+ * @param op 
+ */
+void parallelogram_func(parallelogram* para, output_2d* op);
+/**
+ * @brief function that computes and stores the area and perimeter of rhombus from the given input
+ * 
+ * @param rhom 
+ * @param op 
+ */
+void rhombus_func(rhombus* rhom, output_2d* op);
 
 /**
- * @brief structure for N-sided regular pyramid
+ * @brief function that computes and stores the tsa and volume of cube from the given input
  * 
+ * @param cb 
+ * @param op 
  */
-typedef struct n_sided_reg_pyramid{
-    double number_of_sides;
-    double length_of_side;
-    double height;
-}n_pyr;
+void cube_func(cube* cb, output_3d* op);
+/**
+ * @brief function that computes and stores the tsa and volume of cuboid from the given input
+ * 
+ * @param cbd 
+ * @param op 
+ */
+void cuboid_func(cuboid* cbd, output_3d* op);
+/**
+ * @brief function that computes and stores the tsa and volume of sphere from the given input
+ * 
+ * @param sph 
+ * @param op 
+ */
+void sphere_func(sphere* sph, output_3d* op);
+/**
+ * @brief function that computes and stores the tsa and volume of hemisphere from the given input
+ * 
+ * @param hsph 
+ * @param op 
+ */
+void hemisphere_func(hemisphere* hsph, output_3d* op);
+/**
+ * @brief function that computes and stores the tsa and volume of torus from the given input
+ * 
+ * @param tor 
+ * @param op 
+ */
+void torus_func(torus* tor, output_3d* op);
+/**
+ * @brief function that computes and stores the tsa and volume of cylinder from the given input
+ * 
+ * @param cyl 
+ * @param op 
+ */
+void cylinder_func(cylinder* cyl, output_3d* op);
 
 #endif  /* #define __GEOMETRY_CALCULATOR_H__ */
