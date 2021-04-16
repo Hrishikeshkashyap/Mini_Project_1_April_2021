@@ -21,15 +21,12 @@ Folder             | Description
 
 SF Id. |  Name   |    Features    | Issuess Raised |Issues Resolved|No Test Cases|Test Case Pass
 -------|---------|----------------|----------------|---------------|-------------|--------------
-256152 |Manjari.A.P| Feature A, B etc    | X No     | X No   |X No   |X No     
+256152 |Manjari.A.P| 2-Dimensional shapes; 3-Dimensional shapes   |No     | NIL   |14   |yes     
    
 
 ## Challenges Faced and How Was It Overcome
 
-1. ABC
-2. BCD
-3. ...
-4. ...
+1. Integrating all concepts into the project topic - From Reviewers 
 
 ## Learning Resources
 1. [markdownCheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
@@ -37,3 +34,5 @@ SF Id. |  Name   |    Features    | Issuess Raised |Issues Resolved|No Test Case
 3. [git inspector](https://github.com/ejwa/gitinspector.git)
 4. [github workflow](https://docs.github.com/en/actions/learn-github-action)
 
+## References
+1.
