@@ -1,5 +1,5 @@
-#include "unity.h"
-#include "unity_internals.h"
+#include <unity.h>
+#include <unity_internals.h>
 #include "geometry_calculator.h"
 
 #define PROJECT_NAME    "geometric_calc"
