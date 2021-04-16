@@ -26,7 +26,7 @@ SF Id. |  Name   |    Features    | Issuess Raised |Issues Resolved|No Test Case
 
 ## Challenges Faced and How Was It Overcome
 
-1. Integrating all concepts into the project topic - From Reviewers 
+1. Integrating all concepts into the project topic - suggestions from peers and websearch
 
 ## Learning Resources
 1. [markdownCheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
@@ -35,4 +35,9 @@ SF Id. |  Name   |    Features    | Issuess Raised |Issues Resolved|No Test Case
 4. [github workflow](https://docs.github.com/en/actions/learn-github-action)
 
 ## References
-1.
+1. [Geometry Formula references](https://byjus.com/maths/mensuration/)
+2. Project Flow references
+    1. [Fellow Learner 1](https://github.com/Sanchana-2k/LTTS_C_MiniProject.git)
+    2. [Fellow Learner 2](https://github.com/256151/LTTS_MiniProject_C.git)
+    3. [Fellow Learner 3](https://github.com/28-shravya/stepin_project.git)
+    4. [Fellow Learner 4](https://github.com/arc-arnob/LnT_Mini_Project.git)
