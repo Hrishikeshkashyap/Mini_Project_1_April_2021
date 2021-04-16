@@ -13,28 +13,23 @@
 The various features of this calculator include:
 * Can be used in both Windows and Linux
 * 2-Dimensional Shape Measurement: Area and Perimeter of the following shapes can be calculated
-   1. N-sided Regular Polygon
-   2. Isosceles triangle
-   3. Scalene triangle
-   4. Circle
-   5. Ellipse
-   6. Ring
-   7. Rectangle 
-   8. Parallelogram
-   9. Rhombus
+   1. Circle
+   2. Ellipse
+   3. Ring
+   4. Rectangle 
+   5. Parallelogram
+   6. Rhombus
 * 3-Dimensional Shape Measurement: Total Surface Area and Volume of the following shapes can be calculated
    1. Cube
    2. Cuboid
    3. Sphere
    4. Hemisphere
    5. Torus
-   6. Cone
-   7. Cylinder
-   8. N-sided Regular Prism
-   9. N-sided Regular Pyramid
+   6. Cylinder
+  
 
 ## Defining Our System
-![System definition diagram](https://github.com/256152/Mini_Project_1_April_2021/blob/be2cadb06fc5d21a6febb137602d4a5a247d18a7/MiniProject_C/1_Requirements/Define_sys.png)
+![System definition diagram](https://github.com/256152/Mini_Project_1_April_2021/blob/8084f0413c8d2f13c4d8993f86da8556adf5b475/1_Requirements/Define_syst.png)
 ## SWOT ANALYSIS
 ![SWOT Analysis of GeometriCalc](https://github.com/256152/Mini_Project_1_April_2021/blob/3aca8e1cdca1395ec9b16f4929e6b76877844578/MiniProject_C/1_Requirements/SWOT.png)
 
@@ -69,9 +64,9 @@ This utility can be used as a resource and learning material while preparing for
 
 |      ID          |Description                          |Status                         |
 |----------------|-------------------------------|-----------------------------|
-|LR_01|Area and Perimeter Calculation of N-sided Regular Polygon|Implemented|
-|LR_02|Area and Perimeter Calculation of Isosceles triangle|Implemented|
-|LR_03|Area and Perimeter Calculation of Scalene triangle|Implemented|
+|LR_01|Area and Perimeter Calculation of N-sided Regular Polygon|Future|
+|LR_02|Area and Perimeter Calculation of Isosceles triangle|Future|
+|LR_03|Area and Perimeter Calculation of Scalene triangle|Future|
 |LR_04|Area and Perimeter Calculation of Circle|Implemented|
 |LR_05|Area and Perimeter Calculation of Ellipse|Implemented|
 |LR_06|Area and Perimeter Calculation of Ring|Implemented|
@@ -83,9 +78,8 @@ This utility can be used as a resource and learning material while preparing for
 |LR_12|TSA and Volume Calculation of Sphere|Implemented|
 |LR_13|TSA and Volume Calculation of Hemisphere|Implemented|
 |LR_14|TSA and Volume Calculation of Torus|Implemented|
-|LR_15|TSA and Volume Calculation of Cone|Implemented|
+|LR_15|TSA and Volume Calculation of Cone|Future|
 |LR_16|TSA and Volume Calculation of Cylinder|Implemented|
-|LR_17|TSA and Volume Calculation of N-sided Regular Prism|Implemented|
-|LR_18|TSA and Volume Calculation of N-sided Regular Pyramid|Implemented|
-|LR_19|Area and Perimeter Calculation of Other 2D shapes|Future|
-|LR_20|TSA and Volume Calculation of Other 3D shapes|Future|
+|LR_17|TSA and Volume Calculation of N-sided Regular Prism|Future|
+|LR_18|TSA and Volume Calculation of N-sided Regular Pyramid|Future|
+
