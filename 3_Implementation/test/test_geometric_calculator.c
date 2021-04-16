@@ -11,7 +11,8 @@ ring ri1 = {0,0};
 rectangle re1 = {0,0};
 parallelogram p1 = {0,0,0};
 rhombus rh1 = {0,0,0};
-
+char shape_choice_2D ='0';
+char shape_choice_3D ='0';
 //output_3d* op_3d = ((output_3d *) malloc(sizeof(output_3d)));
 cube cb1 = {0};
 cuboid cd1 = {0,0,0};
@@ -27,6 +28,7 @@ void test_ring_func(void);
 void test_rectangle_func(void);
 void test_parallelogram_func(void);
 void test_rhombus_func(void);
+void test_two_dimension(void);
 
 void test_cube_func(void);
 void test_cuboid_func(void);
@@ -34,6 +36,7 @@ void test_sphere_func(void);
 void test_hemisphere_func(void);
 void test_torus_func(void);
 void test_cylinder_func(void);
+void test_three_dimension(void);
 
 
 /* Required by the unity test framework */
@@ -54,12 +57,15 @@ int main()
   RUN_TEST(test_rectangle_func);
   RUN_TEST(test_parallelogram_func);
   RUN_TEST(test_rhombus_func);
+  RUN_TEST(test_two_dimension);
   RUN_TEST(test_cube_func);
   RUN_TEST(test_cuboid_func);
   RUN_TEST(test_sphere_func);
   RUN_TEST(test_hemisphere_func);
   RUN_TEST(test_torus_func);
   RUN_TEST(test_cylinder_func);
+  RUN_TEST(test_three_dimension);
+
 
   /* Close the Unity Test Framework */
   return UNITY_END();
@@ -172,4 +178,10 @@ void test_cylinder_func(void){
     TEST_ASSERT_EQUAL(37.714284,op_3d->tsa);
     TEST_ASSERT_EQUAL(12.571428,op_3d->volume);
     free(op_3d);
+}
+void test_two_dimension(void){
+    TEST_ASSERT_EQUAL(0,two_dimension(shape_choice_2D));
+}
+void test_three_dimension(void){
+    TEST_ASSERT_EQUAL(0,three_dimension(shape_choice_3D));
 }
