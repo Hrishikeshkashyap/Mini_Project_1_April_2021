@@ -13,25 +13,20 @@
 The various features of this calculator include:
 * Can be used in both Windows and Linux
 * 2-Dimensional Shape Measurement: Area and Perimeter of the following shapes can be calculated
-   1. N-sided Regular Polygon
-   2. Isosceles triangle
-   3. Scalene triangle
-   4. Circle
-   5. Ellipse
-   6. Ring
-   7. Rectangle 
-   8. Parallelogram
-   9. Rhombus
+   1. Circle
+   2. Ellipse
+   3. Ring
+   4. Rectangle 
+   5. Parallelogram
+   6. Rhombus
 * 3-Dimensional Shape Measurement: Total Surface Area and Volume of the following shapes can be calculated
    1. Cube
    2. Cuboid
    3. Sphere
    4. Hemisphere
    5. Torus
-   6. Cone
-   7. Cylinder
-   8. N-sided Regular Prism
-   9. N-sided Regular Pyramid
+   6. Cylinder
+  
 
 ## Defining Our System
 ![System definition diagram](https://github.com/256152/Mini_Project_1_April_2021/blob/8084f0413c8d2f13c4d8993f86da8556adf5b475/1_Requirements/Define_syst.png)
