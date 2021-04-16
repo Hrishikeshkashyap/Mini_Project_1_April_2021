@@ -1,4 +1,4 @@
-# test plan and test output
+# Test plan and Test output
 
 ## Integration test (High level test)
  * Function integrating user input to the system for 2D shapes - Requirement based test - Passing
