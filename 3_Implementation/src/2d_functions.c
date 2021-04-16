@@ -76,7 +76,7 @@ void rhombus_func(rhombus* rhom, output_2d* op){
     op->area = 0.5 * rhom->length_of_diagonal1 * rhom->length_of_diagonal2;
 }
 
-void two_dimension(int shape_2D){
+void two_dimension(char shape_2D){
     output_2d* op_2d = ((output_2d *) malloc(sizeof(output_2d)));
     circle c1 = {0};
     ellipse e1 = {0,0};
@@ -85,53 +85,96 @@ void two_dimension(int shape_2D){
     parallelogram p1 = {0,0,0};
     rhombus rh1 = {0,0,0};
     switch(shape_2D){
-        case 0:
+        case '0':
             printf("\nQuitting GeometriCalc M.0.\n");
             exit(0);
             break;
-        case 1:
+        case '1':
             printf("\nPlease type the radius of the circle:\n");
             scanf("%lf",&c1.radius);
-            circle_func(&c1, op_2d);
-            printf("Perimeter: %lf \nArea: %lf",op_2d->perimeter,op_2d->area);
-            break;
-        case 2:
-            printf("\nPlease type the semi-major axis and semi-minor axis of the ellipse:\n");
-            scanf("%lf %lf",&e1.semi_major_axis,&e1.semi_minor_axis);
-            ellipse_func(&e1, op_2d);
-            printf("Perimeter: %lf \nArea: %lf",op_2d->perimeter,op_2d->area);
-            break;
-        case 3:
-            printf("\nPlease type the outer radius and inner radius of the ring:\n");
-            scanf("%lf %lf",&ri1.outer_radius,&ri1.inner_radius);
-            if(ri1.outer_radius >= ri1.inner_radius){
-            ring_func(&ri1, op_2d); 
-            printf("Perimeter: %lf \nArea: %lf",op_2d->perimeter,op_2d->area);
-            break;
-            }
-            else{
-                printf("\nOuter radius less than inner radius. Please provide proper input \n");
+            if(c1.radius < 0){
+                printf("\nPlease provide positive values for input \n");
                 break;
             }
-        case 4:
+            else{
+                circle_func(&c1, op_2d);
+                printf("Perimeter: %lf \nArea: %lf",op_2d->perimeter,op_2d->area);
+                break;
+            }
+            break;
+        case '2':
+            printf("\nPlease type the semi-major axis and semi-minor axis of the ellipse:\n");
+            scanf("%lf %lf",&e1.semi_major_axis,&e1.semi_minor_axis);
+            if(e1.semi_major_axis < 0 && e1.semi_minor_axis < 0){
+                printf("\nPlease provide positive values for input \n");
+                break;
+            }
+            else{
+                ellipse_func(&e1, op_2d);
+                printf("Perimeter: %lf \nArea: %lf",op_2d->perimeter,op_2d->area);
+                break;
+            }
+            break;
+        case '3':
+            printf("\nPlease type the outer radius and inner radius of the ring:\n");
+            scanf("%lf %lf",&ri1.outer_radius,&ri1.inner_radius);
+            if(ri1.outer_radius < 0 && ri1.inner_radius < 0){
+                printf("\nPlease provide positive values for input \n");
+                break;
+            }
+            else{
+                if(ri1.outer_radius <= ri1.inner_radius){
+                    printf("\nOuter radius less than inner radius. Please provide proper input \n");
+                    break;
+                }
+                else{
+                    ring_func(&ri1, op_2d); 
+                    printf("Perimeter: %lf \nArea: %lf",op_2d->perimeter,op_2d->area);
+                    break;
+                }
+            }
+            break;
+        case '4':
             printf("\nPlease type the length and breadth of the rectangle:\n");
             scanf("%lf %lf",&re1.length,&re1.breadth);
-            rectangle_func(&re1, op_2d);  
-            printf("Perimeter: %lf \nArea: %lf",op_2d->perimeter,op_2d->area);
+            if(re1.length < 0 && re1.breadth < 0){
+                printf("\nPlease provide positive values for input \n");
+                break;
+            }
+            else{
+                rectangle_func(&re1, op_2d);  
+                printf("Perimeter: %lf \nArea: %lf",op_2d->perimeter,op_2d->area);
+                break;
+            }
             break; 
-        case 5:
+        case '5':
             printf("\nPlease type the length, breadth and height of the parallelogram:\n");
             scanf("%lf %lf %lf",&p1.length,&p1.breadth,&p1.height);
-            parallelogram_func(&p1, op_2d); 
-            printf("Perimeter: %lf \nArea: %lf",op_2d->perimeter,op_2d->area);
+            if(p1.length < 0 && p1.breadth < 0 && p1.height < 0){
+                printf("\nPlease provide positive values for input \n");
+                break;
+            }
+            else{
+                parallelogram_func(&p1, op_2d); 
+                printf("Perimeter: %lf \nArea: %lf",op_2d->perimeter,op_2d->area);
+                break;
+            }
             break;
-        case 6:
+        case '6':
             printf("\nPlease type the length of side, diagonal 1, diagonal 2 of the rhombus:\n");
             scanf("%lf %lf %lf",&rh1.length_of_side,&rh1.length_of_diagonal1,&rh1.length_of_diagonal2);
-            rhombus_func(&rh1, op_2d);  
-            printf("Perimeter: %lf \nArea: %lf",op_2d->perimeter,op_2d->area); 
-            break;    
+            if(rh1.length_of_side < 0 && rh1.length_of_diagonal1 < 0 && rh1.length_of_diagonal2 < 0){
+                printf("\nPlease provide positive values for input \n");
+                break;
+            }
+            else{
+                rhombus_func(&rh1, op_2d);  
+                printf("Perimeter: %lf \nArea: %lf",op_2d->perimeter,op_2d->area); 
+                break;   
+            }
+            break; 
         default:
             printf("\nInvalid choice, choose a valid 2D shape option\n");
+            break;
     }
 }
