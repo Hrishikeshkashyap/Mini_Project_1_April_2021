@@ -19,64 +19,81 @@
  * 
  * @param circ 
  * @param op 
+ * @return int 
  */
-void circle_func(circle* circ, output_2d* op){
+int circle_func(circle* circ, output_2d* op){
     op->perimeter = 2 * PI * circ->radius;
     op->area = PI * circ->radius * circ->radius;
+    return 0;
 }
 /**
  * @brief function definition for ellipse
  * 
  * @param ellp 
  * @param op 
+ * @return int 
  */
-void ellipse_func(ellipse* ellp, output_2d* op){
+int ellipse_func(ellipse* ellp, output_2d* op){
     double temp = 0.5 * (pow(ellp->semi_major_axis,2) + pow(ellp->semi_minor_axis,2));
     op->perimeter = 2 * PI * pow(temp,0.5);
     op->area = PI * ellp->semi_major_axis * ellp->semi_minor_axis;
+    return 0;
 }
 /**
  * @brief function definition for ring
  * 
  * @param rin 
  * @param op 
+ * @return int 
  */
-void ring_func(ring* rin, output_2d* op){
+int ring_func(ring* rin, output_2d* op){
     op->perimeter = 2 * PI * (rin->inner_radius + rin->outer_radius);
     op->area = PI * ((rin->outer_radius * rin->outer_radius) - (rin->inner_radius * rin->inner_radius));
+    return 0;
 }
 /**
  * @brief function definition for rectangle
  * 
  * @param rect 
- * @param op 
+ * @param op
+ * @return int  
  */
-void rectangle_func(rectangle* rect, output_2d* op){
+int rectangle_func(rectangle* rect, output_2d* op){
     op->perimeter = 2 * (rect->breadth + rect->length);
     op->area = rect->length * rect->breadth;
+    return 0;
 }
 /**
  * @brief function definition for parallelogram
  * 
  * @param para 
  * @param op 
+ * @return int 
  */
-void parallelogram_func(parallelogram* para, output_2d* op){
+int parallelogram_func(parallelogram* para, output_2d* op){
     op->perimeter = 2 * (para->breadth + para->length);
     op->area = para->length * para->height;
+    return 0;
 }
 /**
  * @brief function definition for rhombus
  * 
  * @param rhom 
  * @param op 
+ * @return int 
  */
-void rhombus_func(rhombus* rhom, output_2d* op){
+int rhombus_func(rhombus* rhom, output_2d* op){
     op->perimeter = 4 * rhom->length_of_side ;
     op->area = 0.5 * rhom->length_of_diagonal1 * rhom->length_of_diagonal2;
+    return 0;
 }
-
-void two_dimension(char shape_2D){
+/**
+ * @brief function definition for 2D shapes
+ * 
+ * @param shape_2D 
+ * @return int 
+ */
+int two_dimension(char shape_2D){
     output_2d* op_2d = ((output_2d *) malloc(sizeof(output_2d)));
     circle c1 = {0};
     ellipse e1 = {0,0};
@@ -178,4 +195,5 @@ void two_dimension(char shape_2D){
             break;
     }
     free(op_2d);
+    return 0;
 }

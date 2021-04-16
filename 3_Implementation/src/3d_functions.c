@@ -19,63 +19,81 @@
  * 
  * @param cb 
  * @param op 
+ * @return int 
  */
-void cube_func(cube* cb, output_3d* op){
+int cube_func(cube* cb, output_3d* op){
     op->tsa = 6 * cb->length_of_side * cb->length_of_side;
     op->volume = cb->length_of_side * cb->length_of_side * cb->length_of_side;
+    return 0;
 }
 /**
  * @brief function definition for ciuboid
  * 
  * @param cbd 
  * @param op 
+ * @return int 
  */
-void cuboid_func(cuboid* cbd, output_3d* op){
+int cuboid_func(cuboid* cbd, output_3d* op){
     op->tsa = 2 * ((cbd->length * cbd->breadth) + (cbd->height * cbd->breadth) + (cbd->length * cbd->height));
     op->volume = cbd->length* cbd->breadth * cbd->height;
+    return 0;
 }
 /**
  * @brief function definition for sphere
  * 
  * @param sph 
  * @param op 
+ * @return int 
  */
-void sphere_func(sphere* sph, output_3d* op){
+int sphere_func(sphere* sph, output_3d* op){
     op->tsa = 4 * PI * sph->radius * sph->radius;
     op->volume = 4/3 * PI * sph->radius * sph->radius * sph->radius;
+    return 0;
 }
 /**
  * @brief function definition for hemisphere
  * 
  * @param hsph 
  * @param op 
+ * @return int 
  */
-void hemisphere_func(hemisphere* hsph, output_3d* op){
+int hemisphere_func(hemisphere* hsph, output_3d* op){
     op->tsa = 3 * PI * hsph->radius * hsph->radius;
     op->volume = 0.666666 * PI * hsph->radius * hsph->radius * hsph->radius;
+    return 0;
 }
 /**
  * @brief function definition for torus
  * 
  * @param tor 
  * @param op 
+ * @return int 
  */
-void torus_func(torus* tor, output_3d* op){
+int torus_func(torus* tor, output_3d* op){
     op->tsa = 4 * PI * PI * tor->large_radius * tor->small_radius;
     op->volume = 2 * PI * PI * tor->large_radius * tor->small_radius * tor->small_radius;
+    return 0;
 }
 /**
  * @brief function definition for cylinder
  * 
  * @param cyl 
  * @param op 
+ * @return int 
  */
-void cylinder_func(cylinder* cyl, output_3d* op){
+ 
+int cylinder_func(cylinder* cyl, output_3d* op){
     op->tsa = 2 * PI * cyl->radius * (cyl->radius + cyl->height);
     op->volume =  PI * cyl->radius * cyl->radius * cyl->height;
+    return 0;
 }
-
-void three_dimension(char shape_3D){
+/**
+ * @brief function definition for 3D shapes
+ * 
+ * @param shape_3D 
+ * @return int 
+ */
+int three_dimension(char shape_3D){
     output_3d* op_3d = ((output_3d *) malloc(sizeof(output_3d)));
     cube cb1 = {0};
     cuboid cd1 = {0,0,0};
@@ -177,4 +195,5 @@ void three_dimension(char shape_3D){
             break;
     }
     free(op_3d);
+    return 0;
 }

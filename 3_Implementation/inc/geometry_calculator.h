@@ -144,88 +144,110 @@ typedef struct output_3d{
  * 
  * @param circ 
  * @param op 
+ * @return int
  */
-void circle_func(circle* circ, output_2d* op);
+int circle_func(circle* circ, output_2d* op);
 /**
  * @brief function that computes and stores the area and perimeter of ellipse from the given input
  * 
  * @param ellp 
  * @param op 
+ * @return int
  */
-void ellipse_func(ellipse* ellp, output_2d* op);
+int ellipse_func(ellipse* ellp, output_2d* op);
 /**
  * @brief function that computes and stores the area and perimeter of ring from the given input
  * 
  * @param rin 
  * @param op 
+ * @return int
  */
-void ring_func(ring* rin, output_2d* op);
+int ring_func(ring* rin, output_2d* op);
 /**
  * @brief function that computes and stores the area and perimeter of rectangle from the given input
  * 
  * @param rect 
  * @param op 
+ * @return int
  */
-void rectangle_func(rectangle* rect, output_2d* op);
+int rectangle_func(rectangle* rect, output_2d* op);
 /**
  * @brief function that computes and stores the area and perimeter of parallelogram from the given input
  * 
  * @param para 
  * @param op 
+ * @return int
  */
-void parallelogram_func(parallelogram* para, output_2d* op);
+int parallelogram_func(parallelogram* para, output_2d* op);
 /**
  * @brief function that computes and stores the area and perimeter of rhombus from the given input
  * 
  * @param rhom 
  * @param op 
+ * @return int
  */
-void rhombus_func(rhombus* rhom, output_2d* op);
+int rhombus_func(rhombus* rhom, output_2d* op);
 
 /**
  * @brief function that computes and stores the tsa and volume of cube from the given input
  * 
  * @param cb 
  * @param op 
+ * @return int
  */
-void cube_func(cube* cb, output_3d* op);
+int cube_func(cube* cb, output_3d* op);
 /**
  * @brief function that computes and stores the tsa and volume of cuboid from the given input
  * 
  * @param cbd 
  * @param op 
+ * @return int
  */
-void cuboid_func(cuboid* cbd, output_3d* op);
+int cuboid_func(cuboid* cbd, output_3d* op);
 /**
  * @brief function that computes and stores the tsa and volume of sphere from the given input
  * 
  * @param sph 
  * @param op 
+ * @return int
  */
-void sphere_func(sphere* sph, output_3d* op);
+int sphere_func(sphere* sph, output_3d* op);
 /**
  * @brief function that computes and stores the tsa and volume of hemisphere from the given input
  * 
  * @param hsph 
  * @param op 
+ * @return int
  */
-void hemisphere_func(hemisphere* hsph, output_3d* op);
+int hemisphere_func(hemisphere* hsph, output_3d* op);
 /**
  * @brief function that computes and stores the tsa and volume of torus from the given input
  * 
  * @param tor 
  * @param op 
+ * @return int
  */
-void torus_func(torus* tor, output_3d* op);
+int torus_func(torus* tor, output_3d* op);
 /**
  * @brief function that computes and stores the tsa and volume of cylinder from the given input
  * 
  * @param cyl 
  * @param op 
+ * @return int
  */
-void cylinder_func(cylinder* cyl, output_3d* op);
-
-void two_dimension(char shape_2D);
-
-void three_dimension(char shape_3D);
+int cylinder_func(cylinder* cyl, output_3d* op);
+/**
+ * @brief function that obtains input and calls the appropriate 2D shape
+ * 
+ * @param shape_2D 
+ * @return int 
+ */
+int two_dimension(char shape_2D);
+/**
+ * @brief function that obtains input and calls the appropriate 3D shape
+ * 
+ * @param shape_3D 
+ * @return int 
+ */
+int three_dimension(char shape_3D);
 #endif  /* #define __GEOMETRY_CALCULATOR_H__ */
