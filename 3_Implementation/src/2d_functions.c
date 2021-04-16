@@ -98,7 +98,7 @@ void two_dimension(char shape_2D){
             }
             else{
                 circle_func(&c1, op_2d);
-                printf("Perimeter: %lf \nArea: %lf",op_2d->perimeter,op_2d->area);
+                printf("\nPerimeter: %lf \nArea: %lf\n",op_2d->perimeter,op_2d->area);
                 break;
             }
             break;
@@ -111,7 +111,7 @@ void two_dimension(char shape_2D){
             }
             else{
                 ellipse_func(&e1, op_2d);
-                printf("Perimeter: %lf \nArea: %lf",op_2d->perimeter,op_2d->area);
+                printf("\nPerimeter: %lf \nArea: %lf\n",op_2d->perimeter,op_2d->area);
                 break;
             }
             break;
@@ -129,7 +129,7 @@ void two_dimension(char shape_2D){
                 }
                 else{
                     ring_func(&ri1, op_2d); 
-                    printf("Perimeter: %lf \nArea: %lf",op_2d->perimeter,op_2d->area);
+                    printf("\nPerimeter: %lf \nArea: %lf\n",op_2d->perimeter,op_2d->area);
                     break;
                 }
             }
@@ -143,7 +143,7 @@ void two_dimension(char shape_2D){
             }
             else{
                 rectangle_func(&re1, op_2d);  
-                printf("Perimeter: %lf \nArea: %lf",op_2d->perimeter,op_2d->area);
+                printf("\nPerimeter: %lf \nArea: %lf\n",op_2d->perimeter,op_2d->area);
                 break;
             }
             break; 
@@ -156,7 +156,7 @@ void two_dimension(char shape_2D){
             }
             else{
                 parallelogram_func(&p1, op_2d); 
-                printf("Perimeter: %lf \nArea: %lf",op_2d->perimeter,op_2d->area);
+                printf("\nPerimeter: %lf \nArea: %lf\n",op_2d->perimeter,op_2d->area);
                 break;
             }
             break;
@@ -169,7 +169,7 @@ void two_dimension(char shape_2D){
             }
             else{
                 rhombus_func(&rh1, op_2d);  
-                printf("Perimeter: %lf \nArea: %lf",op_2d->perimeter,op_2d->area); 
+                printf("\nPerimeter: %lf \nArea: %lf\n",op_2d->perimeter,op_2d->area);
                 break;   
             }
             break; 
@@ -177,4 +177,5 @@ void two_dimension(char shape_2D){
             printf("\nInvalid choice, choose a valid 2D shape option\n");
             break;
     }
+    free(op_2d);
 }

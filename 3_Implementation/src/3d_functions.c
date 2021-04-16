@@ -93,7 +93,7 @@ void three_dimension(char shape_3D){
             }
             else{
                 cube_func(&cb1, op_3d);
-                printf("Total Surface Area: %lf \nVolume: %lf",op_3d->tsa,op_3d->volume);
+                printf("\nTotal Surface Area: %lf \nVolume: %lf\n",op_3d->tsa,op_3d->volume);
                 break;
             }
             break; 
@@ -106,7 +106,7 @@ void three_dimension(char shape_3D){
             }
             else{
                 cuboid_func(&cd1, op_3d);
-                printf("Total Surface Area: %lf \nVolume: %lf",op_3d->tsa,op_3d->volume);
+                printf("\nTotal Surface Area: %lf \nVolume: %lf\n",op_3d->tsa,op_3d->volume);
                 break;
             }
             break; 
@@ -119,7 +119,7 @@ void three_dimension(char shape_3D){
             }
             else{
                 sphere_func(&s1, op_3d); 
-                printf("Total Surface Area: %lf \nVolume: %lf",op_3d->tsa,op_3d->volume);
+                printf("\nTotal Surface Area: %lf \nVolume: %lf\n",op_3d->tsa,op_3d->volume);
                 break;
             }
             break; 
@@ -132,7 +132,7 @@ void three_dimension(char shape_3D){
             }
             else{
                 hemisphere_func(&h1, op_3d);  
-                printf("Total Surface Area: %lf \nVolume: %lf",op_3d->tsa,op_3d->volume);
+                printf("\nTotal Surface Area: %lf \nVolume: %lf\n",op_3d->tsa,op_3d->volume);
                 break; 
             }
             break; 
@@ -164,7 +164,7 @@ void three_dimension(char shape_3D){
             }
             else{
                 cylinder_func(&cy1, op_3d);  
-                printf("Total Surface Area: %lf \nVolume: %lf",op_3d->tsa,op_3d->volume);
+                printf("\nTotal Surface Area: %lf \nVolume: %lf\n",op_3d->tsa,op_3d->volume);
                 break;   
             } 
             break; 
@@ -176,4 +176,5 @@ void three_dimension(char shape_3D){
             printf("\nInvalid choice, choose a valid 3D shape option\n");
             break;
     }
+    free(op_3d);
 }
